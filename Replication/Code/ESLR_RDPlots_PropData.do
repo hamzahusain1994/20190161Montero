@@ -68,6 +68,7 @@ save `tempdata', replace
 	
 	append using "Output/Temp/RD"
 
+	*Plotting averages within bins with lpoly points
 	
 	twoway (connected s x if x>500.00, sort msymbol(none) clcolor(black) clpat(solid) clwidth(medthick)) /*
 	*/(connected ciplus x if x>500.00, sort msymbol(none) clcolor(black) clpat(shortdash) clwidth(thin)) /*
