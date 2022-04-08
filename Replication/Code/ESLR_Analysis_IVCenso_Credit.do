@@ -8,9 +8,6 @@ set matsize 3000
 set more off
 set scheme s2color
 
-** Set Workspace **
-cd /Users/`c(username)'/Dropbox/Research_ElSalvador_LandReform/Replication
-
 ** ssc install rdrobust; winsor2; outreg2; lpoly; cmogram; dm88_1; grqreg; gr0002_3; pdslasso; lassopack; univar; ietoolkit
 
 *********************

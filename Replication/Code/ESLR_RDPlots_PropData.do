@@ -7,9 +7,6 @@ clear
 set matsize 3000
 set more off
 
-** Set Workspace **
-cd /Users/eduardomontero/Dropbox/Research_ElSalvador_LandReform/Replication
-
 ******************************************************
 
 ** Load the Data:
@@ -35,7 +32,7 @@ tempfile tempdata
 save `tempdata', replace
 
 	keep if (own_amt>500.00 & own_amt<800.00)
-	lpoly reform own_amt if (own_amt>500.00 & own_amt<800.00), kernel(rectangle) bwidth(300) degree(2)  generate(x s) se(se) nograph 
+	lpoly reform own_amt if (own_amt>500.00 & own_amt<800.00), kernel(rectangle) bwidth(300) degree(2)  generate(x s) se(se) nograph
 	keep x s se 
 	drop if x==.
 	save "Output/Temp/RD", replace

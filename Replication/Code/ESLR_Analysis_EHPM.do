@@ -7,9 +7,6 @@ clear
 set matsize 3000
 set more off
 
-** Set Workspace **
-cd /Users/`c(username)'/Dropbox/Research_ElSalvador_LandReform/Replication/
-
 *********************
 *** Load the Data ***
 *********************

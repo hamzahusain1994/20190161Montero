@@ -9,9 +9,26 @@ set more off
 set scheme s2color
 
 ** Set Workspace **
-cd /Users/`c(username)'/Dropbox/Research_ElSalvador_LandReform/Replication
+*cd /Users/`c(username)'/Dropbox/Research_ElSalvador_LandReform/Replication
 
-** ssc install rdrobust; winsor2; outreg2; outreg; estout; lpoly; cmogram; dm88_1; grqreg; gr0002_3; pdslasso; lassopack; univar; ietoolkit; rdlocrand; rdpower (net install rdpower, from(https://raw.githubusercontent.com/rdpackages/rdpower/master/stata) replace)
+cd "/Users/hamzahusain/Library/Mobile Documents/com~apple~CloudDocs/BerkeleyARE/SecondYear/Spring/ECON270B/20190161Montero/Replication"
+
+ssc install rdrobust
+ssc install winsor2 
+ssc install outreg2 
+ssc install outreg 
+ssc install estout 
+ssc install lpoly /*didn't install, not found at ssc*/
+ssc install cmogram 
+ssc install dm88_1 /*didn't install, not found at ssc*/
+ssc install grqreg 
+ssc install gr0002_3 /*didn't install, not found at ssc*/
+ssc install pdslasso 
+ssc install lassopack /*didn't install, remote connection failed*/
+ssc install univar 
+ssc install ietoolkit 
+ssc install rdlocrand /*didn't install, not found at ssc*/
+ssc install rdpower (net install rdpower, from(https://raw.githubusercontent.com/rdpackages/rdpower/master/stata) replace) /*didn't install*/
 
 ******************
 *** MASTER DO FILE
@@ -29,16 +46,16 @@ cd /Users/`c(username)'/Dropbox/Research_ElSalvador_LandReform/Replication
 	* R Code: ./Code/ESLR_Balance_PropLevel.R
 
 ** FIGURE 5: Phase I Expropriation RD Plot
-	do "./Code/ESLR_RDPlots_PropData.do"
+	do "Code/ESLR_RDPlots_PropData.do"
 
 ** TABLES 2-4: Agriculture Choices and Productivity
-	do "./Code/ESLR_Analysis_IVCenso.do"
+	do "Code/ESLR_Analysis_IVCenso.do"
 
 ** TABLE 5 & FIGURE 6: Impact of Ownership Type on Earnings and Earnings Distributions
-	do "./Code/ESLR_Analysis_EHPM.do"
+	do "Code/ESLR_Analysis_EHPM.do"
 
 ** TABLE 6:  Credit Access and Sources - RD Estimates
-	do "./Code/ESLR_Analysis_IVCenso_Credit.do"
+	do "Code/ESLR_Analysis_IVCenso_Credit.do"
 
 	
 	
